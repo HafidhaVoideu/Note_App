@@ -1,10 +1,4 @@
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  Box,
-} from "@mui/material";
+import { Dialog, DialogContent, DialogTitle, Box } from "@mui/material";
 import { Tag, useAppContext } from "../context/appContext";
 import TagEdit from "./TagEdit";
 

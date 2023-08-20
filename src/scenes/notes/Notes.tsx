@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import {
   Stack,
   Typography,
@@ -165,6 +165,10 @@ const Notes = () => {
 
     setNotesList([...filteredNotes]);
   }, [colorSort, isNoTag, activeTags.length]);
+
+  useEffect(() => {
+    setNotesList([...notes]);
+  }, [notes]);
 
   // ***************************************************************
 

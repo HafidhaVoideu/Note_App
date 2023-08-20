@@ -9,12 +9,14 @@ const TagEdit = ({ id, tag }: Tag) => {
 
   const handleDeleteTag = (id: string) => {
     const deletedTags = tags.filter((t: Tag) => t.id !== id);
-    setTags([...deletedTags]);
+    setTags(deletedTags);
 
     const updatedNotes = notes.map((note) => {
       const foundTag = note.tags.filter((t: Tag) => t.id !== id);
       return { ...note, tags: foundTag };
     });
+
+    console.log("updtaed Notes:", updatedNotes);
     setNotes([...updatedNotes]);
   };
 
@@ -38,6 +40,8 @@ const TagEdit = ({ id, tag }: Tag) => {
     const editedNotes = notes.map((n, index) => {
       return { ...n, tags: [...editedTags[index]] };
     });
+
+    console.log("edited Notes:", editedNotes);
 
     setNotes([...editedNotes]);
   };

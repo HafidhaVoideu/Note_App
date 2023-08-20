@@ -76,6 +76,14 @@ const AppContextProvider = ({ children }: AppContextProviderProps) => {
     return () => clearTimeout(time);
   }, [alert.isAlertOn]);
 
+  // useEffect(() => {
+  //   console.log("tags:", tags);
+  // }, [tags]);
+
+  useEffect(() => {
+    console.log("notes:", notes);
+  }, [notes]);
+
   return (
     <appContext.Provider
       value={{

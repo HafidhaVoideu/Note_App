@@ -28,6 +28,8 @@ const NoteCom = ({
 
   const theme = useTheme();
 
+  // console.log("tags in note:", tags);
+
   return (
     <Stack
       onClick={() => navigate(`/${id}`)}
