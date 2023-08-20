@@ -114,6 +114,12 @@ const Notes = () => {
   // **************************** UseEffects **********************
 
   useEffect(() => {
+    setNotesList([...notes]);
+  }, [notes]);
+
+
+  
+  useEffect(() => {
     handleSearch();
   }, [search]);
 
